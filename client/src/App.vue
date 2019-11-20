@@ -13,6 +13,20 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <router-link class="nav-link" to="/">Home
+              <span class="sr-only">(current)</span></router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/blog">Blog</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/about">About</router-link>
+          </li>
+        </ul>
+      </div>
     </nav>
     <div id="app">
       <router-view />
