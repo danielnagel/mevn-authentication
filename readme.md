@@ -6,4 +6,7 @@ Example authentication application in the MEVN Stack.
 
 ## Getting started
 
-### npm start
+```
+npm i -g vue-cli
+npm start
+```

@@ -22,6 +22,10 @@ function getAll() {
   return messages.find();
 }
 
+function countAll() {
+  return messages.count();
+}
+
 function create(message) {
   if (!message.username) message.username = "Anonymous";
 
