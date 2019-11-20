@@ -3,6 +3,7 @@ import axios from 'axios';
 // @ts-ignore
 import App from './App.vue';
 import router from './router';
+import store from './store';
 
 Vue.prototype.$http = axios;
 
@@ -13,5 +14,6 @@ if (token) {
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app');

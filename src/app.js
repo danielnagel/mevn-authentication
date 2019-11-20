@@ -40,6 +40,7 @@ app.post("/messages", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
+  console.log(req.body)
   users
     .create(req.body)
     .then(user => {

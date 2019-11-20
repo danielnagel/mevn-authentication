@@ -7,15 +7,6 @@
         <p class="mb-0">{{error}}</p>
       </div>
       <div class="form-group">
-        <label for="username">Username</label>
-        <input
-          v-model="message.username"
-          type="text"
-          class="form-control"
-          id="username"
-          placeholder="Enter a username" required>
-      </div>
-      <div class="form-group">
         <label for="subject">Subject</label>
         <input
           v-model="message.subject"
@@ -63,12 +54,11 @@
 const API_URL = 'http://localhost:4000/messages';
 
 export default {
-  name: 'home',
   data: () => ({
     error: '',
     messages: [],
     message: {
-      username: '',
+      username: 'Anonymous',
       subject: '',
       message: '',
       imageUrl: '',
@@ -84,6 +74,8 @@ export default {
       .then(response => response.json())
       .then((result) => {
         this.messages = result;
+        this.message.username = this.$store.getters.username;
+        console.log(this.$store.getters.username);
       });
   },
   methods: {
@@ -103,7 +95,6 @@ export default {
             this.error = '';
             this.showMessageForm = false;
             this.messages.push(result);
-            this.message.username = '';
             this.message.subject = '';
             this.message.message = '';
             this.message.imageUrl = '';
