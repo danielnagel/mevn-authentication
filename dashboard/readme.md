@@ -1,14 +1,24 @@
-# Dashboard
+# dashboard
 
-Dashboard to monitor the db.
+## Project setup
+```
+npm install
+```
 
-* Display all collections.
-  * CRUD
-* Hardware monitoring
-* System report
-  * Operations in frontend
-  * login try outs
-  * bug/error log
-* authentication
-* one site /dashboard
-  * swap between components in main window?
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
